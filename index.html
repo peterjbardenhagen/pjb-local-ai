@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pjb-local-ai — Hermes/OpenClaw Local Setup Wiki</title>
+  <meta name="description" content="Local AI knowledge base for Hermes/OpenClaw setup, Docker configurations, Ollama models, and media centre management">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">pjb-local-ai</a>
+      <ul class="nav-links">
+        <li><a href="#hermes">Hermes</a></li>
+        <li><a href="#openclaw">OpenClaw</a></li>
+        <li><a href="#docker">Docker</a></li>
+        <li><a href="#ollama">Ollama</a></li>
+        <li><a href="#media">Media Centre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>🤖 pjb-local-ai Knowledge Base</h1>
+      <p class="hero-sub">Hermes & OpenClaw local setup documentation</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hermes">
+      <h2>🧠 Hermes Agent</h2>
+      <ul>
+        <li><strong>Gateway:</strong> ws://127.0.0.1:18789</li>
+        <li><strong>Gateway Token:</strong> <code>085a8618c06ca6a1ba5309f4586936d99da7ed8b535eeca1</code></li>
+        <li><strong>Config:</strong> <code>/home/peterb/.hermes/config.yaml</code></li>
+        <li><strong>Profile:</strong> WSL (pb-legion-1.tail587e7c.ts.net)</li>
+      </ul>
+    </section>
+
+    <section id="openclaw">
+      <h2>⚡ OpenClaw Gateway</h2>
+      <ul>
+        <li><strong>Tailscale URL:</strong> <code>https://pb-legion.tail587e7c.ts.net</code></li>
+        <li><strong>Gateway Port:</strong> 18789</li>
+        <li><strong>Auth Mode:</strong> token</li>
+        <li><strong>Bot:</strong> <a href="https://t.me/openclawpjb_bot">openclawpjb_bot</a></li>
+      </ul>
+      <h3>Plugins (enabled)</h3>
+      <ul>
+        <li>telegram, ollama, browser, firecrawl, google, email</li>
+        <li>clawhub (skill registry), memory-wiki</li>
+        <li>Sequential thinking, workboard</li>
+      </ul>
+    </section>
+
+    <section id="docker">
+      <h2>🐋 Docker Compose</h2>
+      <h3>Media Services (Windows pb-legion)</h3>
+      <ul>
+        <li>Jellyfin (8096) - password: <code>Omnfxop09!</code></li>
+        <li>Sonarr (8989) - API: <code>95c31774b0204865a777ae5da1237d1a</code></li>
+        <li>Radarr (7878) - API: <code>736fcc81dc524337842ecf7ca4dce543</code></li>
+        <li>Prowlarr (9696) - API: <code>68ca5e426ed044b99d4fb417facb6e75</code></li>
+        <li>Bazarr (6767) - OpenSubtitles: <code>rDqbOSfyvk1EVae4HLAe6d43c5TRD9Jg</code></li>
+        <li>qBittorrent (8080) - user/pass: <code>peterb/Omnfxop09!</code></li>
+        <li>Traccar (8082) - GPS tracking</li>
+        <li>LiteLLM Proxy (8085) - Multi-model endpoint</li>
+      </ul>
+    </section>
+
+    <section id="ollama">
+      <h2>🦙 Ollama Models</h2>
+      <h3>Primary Models</h3>
+      <ul>
+        <li><code>gemma3-124k:latest</code> - Primary assistant</li>
+        <li><code>qwen3-coder-30b</code> - Coding specialist</li>
+        <li><code>lfm2.5:8b</code> - Fast agent</li>
+        <li><code>qwen3-vl-opt-256k</code> - Vision analysis</li>
+      </ul>
+      <h3>Connection</h3>
+      <code>http://127.0.0.1:11434/v1</code> (OpenAI-compatible API)
+    </section>
+
+    <section id="media">
+      <h2>📺 Media Centre</h2>
+      <h3>IPTV Sources</h3>
+      <ul>
+        <li>Matt Huisman AU playlists: <code>https://i.mjh.nz</code></li>
+        <li>iptv-org: UK/world channels + EPG</li>
+      </ul>
+      <h3>Threadfin Proxy</h3>
+      <code>http://192.168.4.108:8766</code> - M3U8 → HLS conversion
+    </section>
+  </main>
+</body>
+</html>
